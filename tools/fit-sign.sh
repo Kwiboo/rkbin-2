@@ -11,10 +11,9 @@ SIGN_OUTPUT="${SIGN_DIR}/output"
 UNPACK_UBOOT="${SIGN_DIR}/unpack_uboot"
 UNPACK_LOADER="${SIGN_DIR}/unpack_loader"
 TOOLS=$(cd `dirname $0`; pwd)
+
 # tools
-TOOL_MKIMAGE=${TOOLS}/mkimage
 TOOL_FIT_UNPACK=${TOOLS}/fit-unpack.sh
-TOOL_FIT_CHECK_SIGN=${TOOLS}/fit_check_sign
 TOOL_RK_SIGN=${TOOLS}/rk_sign_tool
 TOOL_BOOT_MERGER=${TOOLS}/boot_merger
 # offset
@@ -103,6 +102,10 @@ function process_args()
 				check_dir_exist $2
 				SIGN_CFG_DIR="${ARG_SRC_DIR}/fit_signcfg/"
 				SIGN_CONFIG="${ARG_SRC_DIR}/fit_signcfg/sign.readonly_config"
+				TOOL_VERSION=`sed -n 's/^# U-Boot \([^ ]*\) Configuration$/\1/p' ${SIGN_CONFIG}`
+				TOOL_MKIMAGE=${TOOLS}/uboot/${TOOL_VERSION}/mkimage
+				TOOL_FIT_CHECK_SIGN=${TOOLS}/uboot/${TOOL_VERSION}/fit_check_sign
+				echo "==================== tools version: ${TOOL_VERSION} ===================="
 				shift 2
 				;;
 			--out-dir)
