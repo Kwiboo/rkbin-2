@@ -290,3 +290,42 @@ In addition to manually adding release document content, you can also modify `sc
 ```
 
 > With this approach, you only need to focus on the document content itself, without worrying about the Markdown document structure or content format.
+
+## Tools
+
+### FIT
+
+- mkimage: only used for packaging FIT non-secure firmware; does not support secure firmware packaging and signing.
+- `uboot/`: tool directory used by the next-dev branch and v5 branch. The mkimage in this directory supports FIT non-secure firmware packaging and secure firmware packaging and signing.
+- fit-repack.sh: used for re-signing FIT secure firmware.
+- fit-sign.sh: used for standalone signing of FIT firmware.
+- fit-unpack.sh: used for unpacking FIT firmware.
+- dtc: used for generating FIT firmware.
+
+### Firmware
+
+- resource_tool: used for packaging and unpacking resource.img.
+- boot_merger: used for packaging Loader.
+- rk_sign_tool: used for signing Loader.
+- trust_merger: used for packaging RK-format trust.img (deprecated).
+- loaderimage: used for packaging RK-format uboot.img and trust.img (deprecated).
+- mkkrnlimg: used for packaging RK-format kernel.img (deprecated).
+- programmer_image_tool: used for converting update.img to an offline programmer image.
+- `burner_image_kits/`: used for creating offline programmer images through the command line (programmer_image_tool is recommended).
+- pcie_idb_config.sh: used for setting PCIe parameters of pcie_idb.img.
+
+### DDR
+
+- ddrbin_tool.py: used for modifying DDR bin configurations.
+- ddrbin_param.txt
+- ddrbin_tool_user_guide.txt
+
+### Flashing
+
+- rkdeveloptool: used for flashing firmware (deprecated).
+- upgrade_tool: used for flashing firmware.
+
+### Others
+
+- gpt2env: used for converting parameter.txt to a GPT partition table recognized by U-Boot.
+- bmp2gray16: used for image format conversion.

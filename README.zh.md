@@ -288,3 +288,42 @@ Binary文件更新时请同步更新`doc/release/`下的中、英文档，具体
 ```
 
 > 这种方式下用户只需要关注文档内容本身，不需要关心md文档和内容格式。
+
+## Tools
+
+### FIT
+
+- mkimage：只用于 FIT 非安全固件打包，不支持安全固件打包签名。
+- `uboot/`：next-dev 分支和 v5 分支使用的工具目录，其中 mkimage 支持 FIT 非安全固件打包和安全固件打包签名。
+- fit-repack.sh：用于 FIT 安全固件重签名。
+- fit-sign.sh：用于 FIT 固件独立签名。
+- fit-unpack.sh：用于 FIT 固件解包。
+- dtc：用于生成 FIT 固件。
+
+### 固件
+
+- resource_tool：用于 resource.img 打包和解包。
+- boot_merger：用于 Loader 打包。
+- rk_sign_tool：用于 Loader 签名。
+- trust_merger：用于 RK 格式 trust.img 打包（已废弃）。
+- loaderimage：用于 RK 格式 uboot.img、trust.img 打包（已废弃）。
+- mkkrnlimg：用于 RK 格式 kernel.img 打包（已废弃）。
+- programmer_image_tool：用于将 update.img 转换为离线烧录器镜像。
+- `burner_image_kits/`：用于通过命令行制作离线烧录器镜像（推荐使用 programmer_image_tool）。
+- pcie_idb_config.sh：用于设置 pcie_idb.img 的 PCIe 参数。
+
+### DDR
+
+- ddrbin_tool.py：用于修改 DDR bin 配置。
+- ddrbin_param.txt
+- ddrbin_tool_user_guide.txt
+
+### 烧写
+
+- rkdeveloptool：用于烧写固件（已废弃）。
+- upgrade_tool：用于烧写固件。
+
+### 其它
+
+- gpt2env：用于将 parameter.txt 转换为 U-Boot 可识别的 GPT 分区表。
+- bmp2gray16：用于图片格式转换。
