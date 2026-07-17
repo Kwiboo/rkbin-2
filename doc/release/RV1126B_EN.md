@@ -1,5 +1,22 @@
 # rv1126b Release Note
 
+## rv1126b_bl32_v1.07.bin
+
+| Date       | File                   | Build Commit | Severity  |
+| ---------- | ---------------------- | ------------ | --------- |
+| 2026-07-17 | rv1126b_bl32_v1.07.bin | 2ab53cfb3    | important |
+
+### Fixed
+
+| Index | Severity  | Update                                                       | Issue description                                            | Issue source |
+| ----- | --------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------ |
+| 1     | important | Supports 0-1G DDR address space                              | When the DDR size is greater than 3G, the DDR starting address starts from 0, leading to TEE mistakenly identifying it as an illegal address | 640948       |
+| 2     | important | Fix the panic caused by RSA verification failure             | A failure in RSA verification may inadvertently trigger an fault injection attack, resulting in a TEE OS panic | 639776       |
+| 3     | important | If the serial port is halted, no information will be printed | The non-secure world may halt the serial port, resulting in timeouts in serial port printing in the secure world, which in turn leads to timeouts in responding to external interrupts | 610227       |
+| 4     | important | Integrate the CVE-2025-46733 patch                           | For details, see https://nvd.nist.gov/vuln/detail/CVE-2025-46733 | -            |
+
+------
+
 ## rv1126b_usbplug_v1.03.bin
 
 | Date       | File                       | Build commit | Severity  |
