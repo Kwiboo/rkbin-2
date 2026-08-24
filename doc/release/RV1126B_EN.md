@@ -1,5 +1,19 @@
 # rv1126b Release Note
 
+## rv1126b_bl32_v1.08.bin
+
+| Date       | File                   | Build commit | Severity  |
+| ---------- | :--------------------- | ------------ | --------- |
+| 2026-08-24 | rv1126b_bl32_v1.08.bin | 6adc764a6    | important |
+
+### Fixed
+
+| Index | Severity  | Update                                                       | Issue description                                            | Issue source |
+| ----- | --------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------ |
+| 1     | important | Fix crypto_service reserved field size mismatch with 32-bit TA | The 32-bit TA passes a 100-byte rk_cipher_config/rk_aead_config buffer, while the 64-bit TEE OS expects 104 bytes (8-byte void* reserved field), so the size check rejects the TA request | 646458       |
+
+------
+
 ## rv1126b_bl32_v1.07.bin
 
 | Date       | File                   | Build Commit | Severity  |
