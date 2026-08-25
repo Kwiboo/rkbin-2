@@ -8,7 +8,7 @@
 
 ### New
 
-1. Add RK1828 support
+1. Add RK1828 support.
 
 ## rk1820_spl_v1.0.0.bin
 
@@ -31,4 +31,4 @@
 
 ### New
 
-1. Add vendor partition support
+1. Add vendor partition support.
