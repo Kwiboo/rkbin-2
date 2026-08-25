@@ -1,5 +1,17 @@
 # RK182X Release Note
 
+## rk1820_spl_v1.10.bin
+
+| Date | File | Build commit | Severity |
+| ---- | :--- | ------------ | -------- |
+| 2026-08-25 | rk1820_spl_v1.10.bin | d313d9ad372 | important |
+
+### New
+
+1. Build from v5 branch.
+
+------
+
 ## rk1820_ddr_v1.10.bin
 
 | Date       | File                 | Build commit | Severity |
