@@ -1,5 +1,19 @@
 # RK182X Release Note
 
+------
+
+## rk1820_ddr_v1.16.bin
+
+| Date       | File                 | Build commit | Severity |
+| ---------- | :------------------- | ------------ | -------- |
+| 2026-08-31 | rk1820_ddr_v1.16.bin | e9d8710d19   | moderate |
+
+### New
+
+1. Add rk_atags support.
+
+------
+
 ## rk1820_spl_v1.10.bin
 
 | Date | File | Build commit | Severity |
