@@ -1,5 +1,18 @@
 # rv1126b Release Note
 
+## rv1126b_bl31_v1.14.elf
+
+| Date       | File                  | Build commit | Severity  |
+| ---------- | :-------------------- | ------------ | --------- |
+| 2026-09-01 | rv1126b_bl31_v1.14.elf | c61e21f08 | important |
+
+### New
+
+1. Support wake-up via non-GPIO0 pins.
+2. Add CANFD support for J/M chips.
+
+------
+
 ## rv1126b_bl32_v1.08.bin
 
 | Date       | File                   | Build commit | Severity  |
